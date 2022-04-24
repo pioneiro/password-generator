@@ -1,7 +1,22 @@
-import '../styles/globals.css'
+import Head from "next/head";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+import "../styles/globals.css";
 
-export default MyApp
+export default ({ Component, pageProps }) => {
+  return (
+    <>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+        <link rel="manifest" href="/manifest.json" />
+
+        <title>Password Generator</title>
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
+};
