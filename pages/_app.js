@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import "../styles/globals.css";
 
-export default ({ Component, pageProps }) => {
+const app = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
@@ -20,3 +20,5 @@ export default ({ Component, pageProps }) => {
     </>
   );
 };
+
+export default app;
